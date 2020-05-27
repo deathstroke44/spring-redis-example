@@ -1,5 +1,6 @@
 package com.techprimers.cache.springredisexample;
 
+import com.techprimers.cache.springredisexample.model.ID;
 import com.techprimers.cache.springredisexample.model.User;
 import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -27,12 +28,12 @@ public class UserRepositoryImpl implements UserRepository {
     }
 
     @Override
-    public Map<String, User> findAll() {
+    public Map<ID, User> findAll() {
         return hashOperations.entries("USER");
     }
 
     @Override
-    public User findById(String id) {
+    public User findById(ID id) {
         return (User)hashOperations.get("USER", id);
     }
 
@@ -42,7 +43,7 @@ public class UserRepositoryImpl implements UserRepository {
     }
 
     @Override
-    public void delete(String id) {
+    public void delete(ID id) {
 
         hashOperations.delete("USER", id);
     }
