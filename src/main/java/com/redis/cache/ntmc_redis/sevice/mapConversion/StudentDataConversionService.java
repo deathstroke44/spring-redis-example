@@ -13,7 +13,6 @@ public class StudentDataConversionService {
     public StudentDataConversionService() {
         Pair temp;
         temp=new Pair("fname","fatherName");
-        System.out.println(temp);
         changeList.add(temp);
         temp=new Pair("mname","motherName");
         changeList.add(temp);
