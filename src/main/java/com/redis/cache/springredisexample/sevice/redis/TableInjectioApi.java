@@ -31,7 +31,7 @@ public class TableInjectioApi {
     @PostMapping("/add")
     public Long add(@RequestBody TableList tableList)
     {
-        return tableInjectionService.addTablesToList(tableList);
+        return tableInjectionService.addTablesToList(tableList.getArrayList());
 //        redisRepository.addToList(TableNames,tableList.getArrayList());
 //        return redisRepository.listSize(TableNames);
     }
@@ -67,17 +67,22 @@ public class TableInjectioApi {
         return tableInjectionService.getStatusOfTableMap(tableName);
 //        return redisMapRepo.get(tableName);
     }
+    @GetMapping("/get-full-map")
+    Map<String,Long> grtFullTableMap()
+    {
+        return tableInjectionService.getStatusOfAllTables();
+    }
     @PostMapping("/institution/add")
     public Map add(@RequestBody MapObject map)
     {
-        return tableInjectionService.addInstitution(map);
+        return tableInjectionService.addInstitution(map.getMap());
 //        redisInstitutionMapRepo.addTOMap(new ID((String) map.getMap().get("eiin"),(String) map.getMap().get("boardName")),map.getMap());
 //        return redisInstitutionMapRepo.get(new ID((String) map.getMap().get("eiin"),(String) map.getMap().get("boardName")));
     }
     @PostMapping("/institution/get")
     public Map getInstitutionDetails(@RequestBody MapObject map)
     {
-        return tableInjectionService.getInstitutionDetails(map);
+        return tableInjectionService.getInstitutionDetails(map.getMap());
 //        return redisInstitutionMapRepo.get(new ID((String) map.getMap().get("eiin"),(String) map.getMap().get("boardName")));
     }
     @PostMapping("/student/map-convert")

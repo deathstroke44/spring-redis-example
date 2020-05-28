@@ -33,4 +33,9 @@ public class RedisMapRepo {
         return hashOps.get("TableMap",tableName);
 
     }
+    public Map<String,Long> getCompleteMap()
+    {
+        HashOperations<String, String, Long> hashOps = redisTemplate.opsForHash();
+        return hashOps.entries("TableMap");
+    }
 }

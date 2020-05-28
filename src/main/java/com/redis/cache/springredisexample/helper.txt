@@ -1,0 +1,36 @@
+POST http://localhost:8082/student/map-convert
+
+POST http://localhost:8082/institution/add
+
+POST http://localhost:8082/institution/GET
+
+{
+  "map":
+  {
+  	"exam_name":"SSC",
+  	"board_name": "Dhaka",
+  	"session": "2016-16",
+  	"regno":"104254366666666",
+  	"name": "Samin Yeaser",
+  	"fname" : "neamul Kabir",
+  	"mname" : "Bilkis Akter"
+  }
+}
+
+POST http://localhost:8082/add-all-tables-to-map
+
+POST http://localhost:8082/add
+
+{
+  "arrayList": ["ssc-2010","ssc-2011","ssc-2012","ssc-2013","ssc-2014"]
+}
+
+GET http://localhost:8082/last
+
+GET http://localhost:8082/add-to-map/ssc-2010/1
+
+GET http://localhost:8082/get-from-map/ssc-2010
+
+GET http://localhost:8082/get-full-map
+
+

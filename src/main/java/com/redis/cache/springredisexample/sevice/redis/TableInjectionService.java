@@ -24,9 +24,9 @@ public class TableInjectionService {
     @Autowired
     private RedisInstitutionMapRepo redisInstitutionMapRepo;
 
-    public Long addTablesToList(TableList tableList)
+    public Long addTablesToList(ArrayList<String> tableList)
     {
-        redisRepository.addToList(TableNames,tableList.getArrayList());
+        redisRepository.addToList(TableNames,tableList);
         return redisRepository.listSize(TableNames);
     }
     public void deleteKey(String key)
@@ -52,18 +52,25 @@ public class TableInjectionService {
 
 
 
-    Long getStatusOfTableMap(@PathVariable("tableName") String tableName)
+    Long getStatusOfTableMap(String tableName)
     {
 
         return redisMapRepo.get(tableName);
     }
-    public Map addInstitution(MapObject map)
+
+    Map getStatusOfAllTables()
     {
-        redisInstitutionMapRepo.addTOMap(new ID((String) map.getMap().get("eiin"),(String) map.getMap().get("boardName")),map.getMap());
-        return redisInstitutionMapRepo.get(new ID((String) map.getMap().get("eiin"),(String) map.getMap().get("boardName")));
+
+        return redisMapRepo.getCompleteMap();
     }
-    public Map getInstitutionDetails(@RequestBody MapObject map)
+
+    public Map addInstitution(Map map)
     {
-        return redisInstitutionMapRepo.get(new ID((String) map.getMap().get("eiin"),(String) map.getMap().get("boardName")));
+        redisInstitutionMapRepo.addTOMap(new ID((String) map.get("eiin"),(String) map.get("boardName")),map);
+        return redisInstitutionMapRepo.get(new ID((String) map.get("eiin"),(String) map.get("boardName")));
+    }
+    public Map getInstitutionDetails(@RequestBody Map map)
+    {
+        return redisInstitutionMapRepo.get(new ID((String) map.get("eiin"),(String) map.get("boardName")));
     }
 }
