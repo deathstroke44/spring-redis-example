@@ -1,4 +1,4 @@
-package com.redis.cache.springredisexample.model;
+package com.redis.cache.ntmc_redis.model;
 
 import java.io.Serializable;
 

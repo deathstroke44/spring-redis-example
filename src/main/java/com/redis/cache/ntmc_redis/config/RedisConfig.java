@@ -1,7 +1,7 @@
-package com.redis.cache.springredisexample.config;
+package com.redis.cache.ntmc_redis.config;
 
-import com.redis.cache.springredisexample.model.ID;
-import com.redis.cache.springredisexample.model.User;
+import com.redis.cache.ntmc_redis.model.ID;
+import com.redis.cache.ntmc_redis.model.User;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;

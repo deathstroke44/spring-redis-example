@@ -1,4 +1,4 @@
-package com.redis.cache.springredisexample.sevice.redis;
+package com.redis.cache.ntmc_redis.sevice.redis;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.redis.cache.springredisexample.sevice.redis;
+package com.redis.cache.ntmc_redis.sevice.redis;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.HashOperations;

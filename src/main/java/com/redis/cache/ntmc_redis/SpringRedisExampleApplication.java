@@ -1,4 +1,4 @@
-package com.redis.cache.springredisexample;
+package com.redis.cache.ntmc_redis;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

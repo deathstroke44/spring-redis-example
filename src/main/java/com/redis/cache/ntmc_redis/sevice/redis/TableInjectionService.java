@@ -1,11 +1,8 @@
-package com.redis.cache.springredisexample.sevice.redis;
+package com.redis.cache.ntmc_redis.sevice.redis;
 
-import com.redis.cache.springredisexample.model.ID;
-import com.redis.cache.springredisexample.model.MapObject;
-import com.redis.cache.springredisexample.model.TableList;
+import com.redis.cache.ntmc_redis.model.ID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.ArrayList;
