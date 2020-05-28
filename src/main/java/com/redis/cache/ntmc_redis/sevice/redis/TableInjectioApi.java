@@ -44,7 +44,7 @@ public class TableInjectioApi {
     @GetMapping("/last")
     public String  add()
     {
-        return tableInjectionService.popLeftTable();
+        return tableInjectionService.popLeftFromTable();
 //        return redisRepository.getLeftItem(TableNames);
     }
 
@@ -58,13 +58,13 @@ public class TableInjectioApi {
     @GetMapping("/add-to-map/{tableName}/{Status}")
     Map<String,Long> updateMap(@PathVariable("tableName") String tableName, @PathVariable("Status") Long Status)
     {
-        return tableInjectionService.updateTableMap(tableName,Status);
+        return tableInjectionService.updateTableStatus(tableName,Status);
 //        return redisMapRepo.addTOMap(tableName,Status);
     }
     @GetMapping("/get-from-map/{tableName}")
     Long getFromMap(@PathVariable("tableName") String tableName)
     {
-        return tableInjectionService.getStatusOfTableMap(tableName);
+        return tableInjectionService.getStatusOfTable(tableName);
 //        return redisMapRepo.get(tableName);
     }
     @GetMapping("/get-full-map")

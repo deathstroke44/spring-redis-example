@@ -31,13 +31,13 @@ public class TableInjectionService {
         redisRepository.deleteKey(key);
     }
 
-    public String popLeftTable()
+    public String popLeftFromTable()
     {
         return redisRepository.getLeftItem(TableNames);
     }
 
 
-    Map<String,Long> updateTableMap(String tableName,Long Status)
+    Map<String,Long> updateTableStatus(String tableName,Long Status)
     {
         return redisMapRepo.addTOMap(tableName,Status);
     }
@@ -49,7 +49,7 @@ public class TableInjectionService {
 
 
 
-    Long getStatusOfTableMap(String tableName)
+    Long getStatusOfTable(String tableName)
     {
 
         return redisMapRepo.get(tableName);
