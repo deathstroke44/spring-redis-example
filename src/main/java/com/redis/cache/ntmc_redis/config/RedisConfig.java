@@ -1,7 +1,6 @@
 package com.redis.cache.ntmc_redis.config;
 
 import com.redis.cache.ntmc_redis.model.ID;
-import com.redis.cache.ntmc_redis.model.User;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
@@ -16,19 +15,7 @@ public class RedisConfig {
         return new JedisConnectionFactory();
     }
 
-    @Bean
-    RedisTemplate<String, User> redisTemplate() {
-        RedisTemplate<String, User> redisTemplate = new RedisTemplate<>();
-        redisTemplate.setConnectionFactory(jedisConnectionFactory());
-        return redisTemplate;
-    }
 
-    @Bean
-    RedisTemplate<ID, User> redisTemplateForIDUser() {
-        RedisTemplate<ID, User> redisTemplate = new RedisTemplate<>();
-        redisTemplate.setConnectionFactory(jedisConnectionFactory());
-        return redisTemplate;
-    }
     @Bean
     RedisTemplate<String, Long> redisTemplateForStringLong() {
         RedisTemplate<String, Long> redisTemplate = new RedisTemplate<>();
