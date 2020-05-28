@@ -4,27 +4,30 @@ import java.io.Serializable;
 
 public class ID implements Serializable
 {
-    String roll;
-    String level;
+    String eiin;
+    String boardName;
 
-    public ID(String roll, String level) {
-        this.roll = roll;
-        this.level = level;
+    public ID(String eiin, String boardName) {
+        this.eiin = eiin;
+        this.boardName = boardName;
     }
 
-    public String getRoll() {
-        return roll;
+    public ID() {
     }
 
-    public void setRoll(String roll) {
-        this.roll = roll;
+    public String getEiin() {
+        return eiin;
     }
 
-    public String getLevel() {
-        return level;
+    public void setEiin(String eiin) {
+        this.eiin = eiin;
     }
 
-    public void setLevel(String level) {
-        this.level = level;
+    public String getBoardName() {
+        return boardName;
+    }
+
+    public void setBoardName(String boardName) {
+        this.boardName = boardName;
     }
 }
