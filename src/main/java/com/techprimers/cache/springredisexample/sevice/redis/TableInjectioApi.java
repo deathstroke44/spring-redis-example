@@ -1,18 +1,20 @@
 package com.techprimers.cache.springredisexample.sevice.redis;
 
-import com.techprimers.cache.springredisexample.model.ID;
 import com.techprimers.cache.springredisexample.model.MapObject;
 import com.techprimers.cache.springredisexample.model.TableList;
+import com.techprimers.cache.springredisexample.sevice.mapConversion.StudentDataConversionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.Map;
 
 @RestController
 public class TableInjectioApi {
     private String TableNames="Table";
     private String TableMapName="TableMap";
+
+    @Autowired
+    private StudentDataConversionService studentDataConversionService;
 
     @Autowired
     private TableInjectionService tableInjectionService;
@@ -76,6 +78,13 @@ public class TableInjectioApi {
     public Map getInstitutionDetails(@RequestBody MapObject map)
     {
         return tableInjectionService.getInstitutionDetails(map);
+//        return redisInstitutionMapRepo.get(new ID((String) map.getMap().get("eiin"),(String) map.getMap().get("boardName")));
+    }
+    @PostMapping("/student/map-convert")
+    public Map convertStudentMap(@RequestBody MapObject map)
+    {
+        return studentDataConversionService.getConvertedMap(map.getMap());
+//        redisInstitutionMapRepo.addTOMap(new ID((String) map.getMap().get("eiin"),(String) map.getMap().get("boardName")),map.getMap());
 //        return redisInstitutionMapRepo.get(new ID((String) map.getMap().get("eiin"),(String) map.getMap().get("boardName")));
     }
 }
