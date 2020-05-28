@@ -1,4 +1,4 @@
-package com.techprimers.cache.springredisexample.sevice.mapConversion;
+package com.redis.cache.springredisexample.sevice.mapConversion;
 
 import javafx.util.Pair;
 import org.springframework.stereotype.Service;

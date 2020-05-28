@@ -1,13 +1,11 @@
-package com.techprimers.cache.springredisexample.sevice.redis;
+package com.redis.cache.springredisexample.sevice.redis;
 
-import com.techprimers.cache.springredisexample.model.ID;
-import com.techprimers.cache.springredisexample.model.MapObject;
-import com.techprimers.cache.springredisexample.model.TableList;
+import com.redis.cache.springredisexample.model.ID;
+import com.redis.cache.springredisexample.model.MapObject;
+import com.redis.cache.springredisexample.model.TableList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.ArrayList;

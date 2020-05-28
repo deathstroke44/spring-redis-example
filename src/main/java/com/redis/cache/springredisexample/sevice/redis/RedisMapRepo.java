@@ -1,16 +1,12 @@
-package com.techprimers.cache.springredisexample.sevice.redis;
+package com.redis.cache.springredisexample.sevice.redis;
 
-import com.techprimers.cache.springredisexample.model.TableList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 
 @Component
 public class RedisMapRepo {

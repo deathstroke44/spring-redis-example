@@ -1,6 +1,5 @@
-package com.techprimers.cache.springredisexample.sevice.redis;
+package com.redis.cache.springredisexample.sevice.redis;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public interface RedisRepository {

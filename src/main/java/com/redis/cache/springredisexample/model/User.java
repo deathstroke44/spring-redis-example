@@ -1,4 +1,4 @@
-package com.techprimers.cache.springredisexample.model;
+package com.redis.cache.springredisexample.model;
 
 import java.io.Serializable;
 

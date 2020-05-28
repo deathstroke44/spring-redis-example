@@ -1,4 +1,4 @@
-package com.techprimers.cache.springredisexample.sevice.redis;
+package com.redis.cache.springredisexample.sevice.redis;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
