@@ -11,12 +11,12 @@ import java.util.Map;
 @Repository
 public class UserRepositoryImpl implements UserRepository {
 
-    private RedisTemplate<String, User> redisTemplate;
+    private RedisTemplate<ID, User> redisTemplate;
 
     private HashOperations hashOperations;
 
 
-    public UserRepositoryImpl(RedisTemplate<String, User> redisTemplate) {
+    public UserRepositoryImpl(RedisTemplate<ID, User> redisTemplate) {
         this.redisTemplate = redisTemplate;
 
         hashOperations = redisTemplate.opsForHash();
